@@ -59,7 +59,8 @@
                     <form class="inline" method="POST" action="user/logout">
                         @csrf
                         <button type="submit">
-                            <i class="fa-solid fa-door-closed"></i><a href="user/logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                            <a href="user/logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                              <i class="fa-solid fa-door-closed"></i>
                               Logout
                             </a>
                         </button>
