@@ -6,7 +6,22 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         
         <div class="info">
-          <a href="#" class="d-block">NguyenThanhLong</a>
+          @auth
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    <span class="font-bold uppercase">
+                        {{auth()->user()->name}}
+                    </span>
+                </a>
+                      <form class="inline" method="POST" action="logout">
+                        @csrf
+                        <button type="submit">
+                          <a href="logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2">
+                              <i class="fa-solid fa-door-closed"></i>
+                              <span class="text-sm font-medium"> Logout</span>
+                            </a>
+                        </button>
+                    </form>
+            @endauth
         </div>
       </div>
 
